@@ -11,36 +11,59 @@ emails, and unanticipated gotchas for developers.
 
 Contents:
 
-  * [Information for Account Managers](#)
-    - [Information Needed from the Client Before Making an Email Template](#)
-  * [Information Needed from the Client Before Making an Email Template](#)
-  * [Design Best Practices](#)
-  * [Development Tips and Best Practices](#)
+* [Information for Account Managers and Project Managers](#information-for-account-managers-and-project-managers)
+  - [Information Needed from the Client Before Making an Email Template](#information-needed-from-the-client-before-making-an-email-template)
+* [Design Best Practices](#design-best-practices)
+* [Development Tips and Best Practices](#development-tips-and-best-practices)
 
 
 
-## Information for Account Managers
+## Information for Account Managers and Project Managers
 
 ### Information Needed from the Client Before Making an Email Template
 
-  * Is this an email template or a one-off email?
-  * What is the subject of the email? Please provide this explicitly to dev.
-  * Who will be sending the email?
-    - If __another firm__ is sending:
-      * Who will be hosting the images for the email?
-      * Who will add the unsubscribe links?
-      * What service is the other firm using to send the email?  This is not always required, but it **is** required if we are to add an unsubscribe link or if we are delivering a reusable template (as opposed to a one-off email).
+* Is this an email template or a one-off email?
+* What is the subject of the email? Please provide this explicitly to dev.
+* Who will be sending the email?
+  - If __another firm__ is sending:
+    * Who will be hosting the images for the email?
+    * Who will add the unsubscribe links?
+    * What service is the other firm using to send the email?  This is not
+      always required, but it **is** required if we are to add an unsubscribe
+      link or if we are delivering a reusable template (as opposed to a
+      one-off email).
 
 
 
 ## Design Best Practices
 
-  * [According to][cm-max-width-2] [very reputable][cm-max-width] [email creators][mc-basics], emails should be **no more than 600-650 px wide**.  While everyone at the agency may have a 5k monitor, a vast majority of email users use the preview pane to read email, which is commonly only ~750-800px wide.
-  * Typography should be limited to [standard system typefaces][mc-typography].  On a website, we can import fonts from e.g. Google, but, sadly, popular email clients such as Gmail, Outlook, and Yahoo! Mail do not support web fonts at all.
-    - NOTE: remember that anyone with Microsoft Office installed will have the base font set supplied with Office.  While this is nice to take advantage of, it is still recommended to test the design with a standard system font as a fallback.
-  * While your list of fonts is limited, email clients have good support for things such as the line-height (vertial character spacing), letter-spacing (e.g. tracking, e.g. horizontal character spacing), word-spacing, etc.
-  * Email client support for margins and general positioning is very poor.  Where this has the biggest effect is text and images cannot overlap without just "slicing" an image.
-  ![](http://dev.gsandf.com/how-to-articles/assets/email-guide/images/negative-margin-apple-mail.png) ![](http://dev.gsandf.com/how-to-articles/assets/email-guide/images/negative-margin-gmail.png)
+[According to][cm-max-width-2] [very reputable][cm-max-width]
+[email creators][mc-basics], emails should be **no more than 600-650 px wide**.
+While everyone at the agency may have a 5k monitor, a vast majority of email
+users use the preview pane to read email, which is commonly only ~750-800px
+wide.
+
+Typography should be limited to [standard system typefaces][mc-typography].
+On a website, we can import fonts from e.g. Google, but, sadly, popular email
+clients such as Gmail, Outlook, and Yahoo! Mail do not support web fonts at all.
+If the client really wants a particular typeface used, an image of the text
+*can* be used, but [several email clients][cm-image-blocking] block images by
+default.  In other words, it's not generally a good idea to use images to show
+any key information.
+
+> NOTE: remember that anyone with Microsoft Office installed will have the base
+> font set supplied with Office.  While this is nice to take advantage of, it is
+> still recommended to test the design with a standard system font as a
+> fallback.
+
+While your list of fonts is limited, email clients have good support for things
+such as the line-height (vertial character spacing), letter-spacing (e.g.
+tracking, e.g. horizontal character spacing), word-spacing, etc. Email client
+support for margins and general positioning is very poor.  Where this has the
+biggest effect is text and images cannot overlap without putting copy inside
+"sliced" images.
+  * Expected result (Apple Mail) ![](./images/negative-margin-apple-mail.jpg)
+  * Gmail ![](./images/negative-margin-gmail.jpg)
 
 
 ## Development Tips and Best Practices
@@ -71,5 +94,6 @@ Contents:
 [mc-typography]: http://templates.mailchimp.com/design/typography/ "MailChimp Typography Reference"
 [cm-min-font]: http://www.campaignmonitor.com/blog/how-to/2010/12/save-your-layout-by-overriding-the-minimum-font-size-on-the-iphone-and/
 [cm-css]: https://www.campaignmonitor.com/css/
+[cm-image-blocking]: https://www.campaignmonitor.com/dev-resources/will-it-work/image-blocking/
 [cm-max-width]: https://www.campaignmonitor.com/blog/email-marketing/2005/04/maximum-width-for-html-emails/
 [cm-max-width-2]: https://www.campaignmonitor.com/blog/email-marketing/2011/06/how-wide-are-html-email-designs-today/
