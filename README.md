@@ -151,10 +151,12 @@ Media query styles should not be inlined (how would you do that, anyway??). Ther
 ## Stuff to Add
 
   * you can optionally show content if you are in Outlook:
+
   ```html
   <!--[if mso]> shown only in Outlook <![endif]-->
   <!--[if !mso]> don't show in Outlook <![endif]-->
   ```
+
   * design and dev: prefer html buttons over images
 
 [dev-cerberus-home]: http://tedgoas.github.io/Cerberus
